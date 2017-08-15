@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.08"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.55"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/edit_name_fridge_product"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_name_product_style"
+                android:ems="10"
+                android:hint="@string/add_product"
+                android:inputType="textPersonName"
+                android:padding="@dimen/edit_text_padding"
+                android:textSize="@dimen/text_size" />
+            <TextView
+                android:id="@+id/back_to_list_fridge_products"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@android:color/darker_gray"
+                android:clickable="true"
+                android:drawableLeft="@android:drawable/ic_menu_revert"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/text_size" />
+            <ListView
+                android:id="@+id/list_fridge_products"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.45"
+            android:orientation="vertical">
+            <ListView
+                android:id="@+id/fridge_products"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true" />
+
+            <TextView
+                android:id="@+id/create_recipe_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorRed"
+                android:gravity="center"
+                android:padding="@dimen/pad"
+                android:text="@string/form_recipe"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/delete_list"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@android:color/holo_green_light"
+                android:clickable="true"
+                android:gravity="center"
+                android:padding="@dimen/pad"
+                android:text="@string/delete_list"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold|italic" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btn_fridge_list_recipes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:clickable="true"
+            app:srcCompat="@mipmap/search" />
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            app:srcCompat="@mipmap/fridge"
+            android:background="@null" />
+        <ImageButton
+            android:id="@+id/btn_fridge_add_recipe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:clickable="true"
+            app:srcCompat="@mipmap/list" />
+        <ImageButton
+            android:id="@+id/btn_fridge_basket"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:clickable="true"
+            app:srcCompat="@mipmap/basket" />
+    </LinearLayout>
+</LinearLayout>

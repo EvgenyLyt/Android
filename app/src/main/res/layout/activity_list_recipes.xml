@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.08"
+        android:weightSum="1"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_weight="0.97"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edit_name_recipe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_name_product_style"
+                android:hint="@string/enter_recipe"
+                android:paddingBottom="@dimen/edit_text_padding"
+                android:paddingLeft="@dimen/edit_text_padding"
+                android:paddingRight="@dimen/edit_text_padding"
+                android:paddingTop="@dimen/edit_text_padding"
+                android:textSize="@dimen/text_size" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:clickable="true"
+                android:id="@+id/back_to_list_recipes"
+                android:background="@android:color/darker_gray"
+                android:gravity="center_horizontal"
+                android:drawableLeft="@android:drawable/ic_menu_revert"
+                android:textSize="@dimen/text_size" />
+            <ListView
+                android:id="@+id/list_recipes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="0.03"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/update_list_recipes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorLightGray"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="@string/update_recipes"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size"
+                android:textStyle="italic|bold" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@mipmap/search"
+            android:background="@null"
+            android:baselineAlignBottom="false" />
+
+        <ImageButton
+            android:id="@+id/btn_list_recipes_fridge"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:clickable="true"
+            app:srcCompat="@mipmap/fridge" />
+
+        <ImageButton
+            android:id="@+id/btn_list_recipes_add_recipe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:clickable="true"
+            app:srcCompat="@mipmap/list" />
+
+        <ImageButton
+            android:id="@+id/btn_list_recipes_basket"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:clickable="true"
+            app:srcCompat="@mipmap/basket" />
+    </LinearLayout>
+</LinearLayout>
